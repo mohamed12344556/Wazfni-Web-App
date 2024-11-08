@@ -166,7 +166,7 @@ class CaseStudies extends StatelessWidget {
               const Spacer(),
               CustomElevatedButton(
                 title: "View case study",
-                color: buttonColor, 
+                color: buttonColor,
                 isShadowActive: false,
                 onPressed: () {},
                 height: 48,

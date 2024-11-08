@@ -43,7 +43,7 @@ class TestImonialsPage extends StatelessWidget {
             const SizedBox(height: 24),
             Expanded(
               child: GridView.builder(
-                clipBehavior: Clip.none,
+                // clipBehavior: Clip.none,
                 itemCount: images.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,
