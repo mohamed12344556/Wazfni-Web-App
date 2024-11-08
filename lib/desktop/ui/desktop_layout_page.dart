@@ -19,8 +19,6 @@ class DesktopLayoutPage extends StatefulWidget {
 class _DesktopLayoutPageState extends State<DesktopLayoutPage> {
 
   final GlobalKey _appBarKey = GlobalKey();
-
-
   final ScrollController _scrollController = ScrollController();
 
   final GlobalKey _homeKey = GlobalKey();

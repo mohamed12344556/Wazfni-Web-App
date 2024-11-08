@@ -16,7 +16,7 @@ class _WorkExperiencePageState extends State<WorkExperiencePage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(left: 40 ,right: 40 ,bottom: 40),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -37,36 +37,36 @@ class _WorkExperiencePageState extends State<WorkExperiencePage> {
             ),
             const SizedBox(height: 30),
 
-            const work_experience_card(
+            const WorkExperienceCard(
               label: 'Fintech',
               title: 'Work name here',
               description:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
               buttonColor: AppColors.vibrantOrange,
               buttonText: 'View Experience',
-              imageUrl: 'assets/images/fintech.svg',
+              imageUrl: 'https://plus.unsplash.com/premium_photo-1667538960183-82690c60a2a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
               labelColor: AppColors.vibrantOrange,
             ),
             const SizedBox(height: 16),
-            const work_experience_card(
+            const WorkExperienceCard(
               label: 'EdTech',
               title: 'Work name here',
               description:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
               buttonColor: AppColors.primaryBlue,
               buttonText: 'View Experience',
-              imageUrl: 'assets/images/edtech.svg',
+              imageUrl: 'https://plus.unsplash.com/premium_photo-1667538960183-82690c60a2a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
               labelColor: AppColors.primaryBlue,
             ),
             const SizedBox(height: 16),
-            const work_experience_card(
+            const WorkExperienceCard(
               label: 'Pharma',
               title: 'Work name here',
               description:
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
               buttonColor: AppColors.emeraldGreen,
               buttonText: 'View Experience',
-              imageUrl: 'assets/images/pharma.svg',
+              imageUrl: 'https://plus.unsplash.com/premium_photo-1667538960183-82690c60a2a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
               labelColor: AppColors.emeraldGreen,
             ),
           ],
