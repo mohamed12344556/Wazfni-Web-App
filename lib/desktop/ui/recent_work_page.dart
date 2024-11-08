@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wazafny_app/core/themes/app_colors.dart';
 import 'package:wazafny_app/core/themes/app_styles.dart';
 
-import '../widgets/recent_work_card.dart';
+import '../../mobile/ui/recent_work_page.dart';
+
 
 class RecentWorkPage extends StatelessWidget {
   const RecentWorkPage({super.key});
