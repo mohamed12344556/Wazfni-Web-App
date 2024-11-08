@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wazafny_app/core/themes/app_colors.dart';
+import 'package:wazafny_app/core/themes/app_styles.dart';
 import 'package:wazafny_app/mobile/widgets/custom_elevated_button.dart';
 
 class RecentWorkPage extends StatelessWidget {
@@ -13,17 +14,19 @@ class RecentWorkPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text('Recent Work'),
+           Text('Recent Work',
+          style: AppTextStyles.font34PureBlackExtraBold,
+          ),
           const SizedBox(height: 24.0),
-          const Text(
+           Text(
             "Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-            style: TextStyle(fontSize: 16.0, color: Colors.black54),
+            style: AppTextStyles.font14mediumGrayRegular,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8.0),
-          const Text(
+           Text(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            style: TextStyle(fontSize: 14.0, color: Colors.black54),
+            style: AppTextStyles.font14mediumGrayRegular,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24.0),
@@ -86,15 +89,12 @@ class WorkCard extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18.0,
+                  style: AppTextStyles.font24PureBlackExtraBold,
                   ),
-                ),
                 const SizedBox(height: 8.0),
                 Text(
                   description,
-                  style: const TextStyle(fontSize: 14.0, color: Colors.black54),
+                  style: AppTextStyles.font14mediumGrayRegular,
                 ),
                 const SizedBox(height: 12.0),
                 CustomElevatedButton(

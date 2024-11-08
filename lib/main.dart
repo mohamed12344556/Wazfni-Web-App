@@ -2,7 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:wazafny_app/core/themes/app_colors.dart';
-import 'package:wazafny_app/mobile/ui/home_page.dart';
+
+import 'desktop/ui/home_page.dart';
 
 void main() {
   runApp(

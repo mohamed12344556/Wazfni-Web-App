@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(width: 50,
                   ), // Add some spacing between the columns
-                  CircleAvatarImageWidget(
+                  const CircleAvatarImageWidget(
                     networkImage:
                         'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                   ),

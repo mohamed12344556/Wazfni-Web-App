@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/themes/app_colors.dart';
+import '../../core/themes/app_styles.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String title;
@@ -52,8 +53,7 @@ class CustomElevatedButton extends StatelessWidget {
           children: [
             Text(
               title,
-              style:
-                  TextStyle(fontSize: fontSize ?? 16, color: AppColors.white),
+              style: AppTextStyles.font12WhiteSemiBold,
             ),
             const SizedBox(width: 10),
             const Icon(

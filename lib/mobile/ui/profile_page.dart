@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wazafny_app/core/themes/app_styles.dart';
 import 'package:wazafny_app/mobile/widgets/custom_elevated_button.dart';
 import 'package:wazafny_app/mobile/widgets/build_profile_image_.dart';
 
@@ -18,24 +19,17 @@ class ProfilePage extends StatelessWidget {
         children: [
           const BuildProfileImage(),
           const SizedBox(height: 20),
-          const Expanded(
+           Expanded(
             child: Text(
               'Your Name Here',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
+              style: AppTextStyles.font44WhiteExtraBold,
               ),
             ),
-          ),
           const SizedBox(height: 10),
-          const Expanded(
+          Expanded(
             child: Text(
               'Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
+              style: AppTextStyles.font14mediumGrayRegular,
               textAlign: TextAlign.center,
             ),
           ),
@@ -48,14 +42,11 @@ class ProfilePage extends StatelessWidget {
           ),
           const Spacer(),
           // Worked With Section
-          const Text(
+           Text(
             'Worked with',
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 16,
-            ),
-          ),
-          const SizedBox(height: 10),
+            style: AppTextStyles.font14WhiteBold ,
+           ),
+           const SizedBox(height: 10),
           // Logo Row
           const BuildLogo(),
         ],

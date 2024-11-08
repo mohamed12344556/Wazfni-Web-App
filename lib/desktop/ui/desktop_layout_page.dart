@@ -31,7 +31,7 @@ class _DesktopLayoutPageState extends State<DesktopLayoutPage> {
     final context = key.currentContext;
     if (context != null) {
       Scrollable.ensureVisible(context,
-          duration: Duration(seconds: 1), curve: Curves.easeInOut);
+          duration: const Duration(seconds: 1), curve: Curves.easeInOut);
     }
   }
 
@@ -115,12 +115,12 @@ class _DesktopLayoutPageState extends State<DesktopLayoutPage> {
             Section(
               key: _homeKey,
               height: 700,
-              child: HomePage(),
+              child: const HomePage(),
             ),
             Section(
               key: _workExperienceKey,
               height: 1000,
-              child: WorkExperiencePage(),
+              child: const WorkExperiencePage(),
             ),
             Section(
               key: _testimonialsKey,
@@ -130,7 +130,7 @@ class _DesktopLayoutPageState extends State<DesktopLayoutPage> {
             Section(
               key: _recentWorkKey,
               height: 700,
-              child: RecentWorkPage(),
+              child: const RecentWorkPage(),
             ),
             Section(
               key: _contactMeKey,

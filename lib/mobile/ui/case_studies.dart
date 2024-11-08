@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wazafny_app/mobile/widgets/custom_elevated_button.dart';
 import '../../core/themes/app_colors.dart';
+import '../../core/themes/app_styles.dart';
 
 class CaseStudy {
   final String category;
@@ -26,21 +27,21 @@ class CaseStudies extends StatelessWidget {
         category: 'Fintech',
         title: 'Work name here',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         imageUrl: 'assets/images/image2.png',
       ),
       CaseStudy(
         category: 'Technology',
         title: 'Work name here',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         imageUrl: 'assets/images/image2.png',
       ),
       CaseStudy(
         category: 'Healthcare',
         title: 'Work name here',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         imageUrl: 'assets/images/image2.png',
       ),
     ];
@@ -73,12 +74,12 @@ class CaseStudies extends StatelessWidget {
         children: [
           Text(
             "Case Studies",
-            style: Theme.of(context).textTheme.headlineSmall,
+            style: AppTextStyles.font34PureBlackExtraBold,
           ),
           const SizedBox(height: 16),
           Text(
             "We have been featured in",
-            style: Theme.of(context).textTheme.bodySmall,
+            style: AppTextStyles.font14mediumGrayRegular,
           ),
           const SizedBox(height: 16),
           Expanded(
@@ -88,9 +89,9 @@ class CaseStudies extends StatelessWidget {
                 final caseStudy = caseStudies[index];
                 final isEven = index % 2 == 0;
                 final bgColor = categoryBackgroundColors[
-                    index % categoryBackgroundColors.length];
+                index % categoryBackgroundColors.length];
                 final textColor =
-                    categoryTextColors[index % categoryTextColors.length];
+                categoryTextColors[index % categoryTextColors.length];
                 final btnColor = buttonColors[index % buttonColors.length];
 
                 return Container(
@@ -108,15 +109,15 @@ class CaseStudies extends StatelessWidget {
                   child: Row(
                     children: isEven
                         ? [
-                            _buildTextContent(
-                                caseStudy, bgColor, textColor, btnColor),
-                            _buildImageContent(caseStudy.imageUrl),
-                          ]
+                      _buildTextContent(
+                          caseStudy, bgColor, textColor, btnColor),
+                      _buildImageContent(caseStudy.imageUrl),
+                    ]
                         : [
-                            _buildImageContent(caseStudy.imageUrl),
-                            _buildTextContent(
-                                caseStudy, bgColor, textColor, btnColor),
-                          ],
+                      _buildImageContent(caseStudy.imageUrl),
+                      _buildTextContent(
+                          caseStudy, bgColor, textColor, btnColor),
+                    ],
                   ),
                 );
               },
@@ -128,11 +129,11 @@ class CaseStudies extends StatelessWidget {
   }
 
   Widget _buildTextContent(
-    CaseStudy caseStudy,
-    Color categoryBgColor,
-    Color categoryTextColor,
-    Color buttonColor,
-  ) {
+      CaseStudy caseStudy,
+      Color categoryBgColor,
+      Color categoryTextColor,
+      Color buttonColor,
+      ) {
     return Expanded(
       child: Container(
         decoration: const BoxDecoration(
@@ -144,7 +145,6 @@ class CaseStudies extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                //! make it
                 height: 24,
                 width: 72,
                 decoration: BoxDecoration(
@@ -156,13 +156,21 @@ class CaseStudies extends StatelessWidget {
                   caseStudy.category,
                   style: TextStyle(
                     color: categoryTextColor,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
               const SizedBox(height: 8),
-              Text(caseStudy.title),
+              Text(
+                caseStudy.title,
+                style: AppTextStyles.font34PureBlackExtraBold,
+              ),
               const SizedBox(height: 8),
-              Text(caseStudy.description),
+              Text(
+                caseStudy.description,
+                style: AppTextStyles.font14mediumGrayRegular,
+              ),
               const Spacer(),
               CustomElevatedButton(
                 title: "View case study",

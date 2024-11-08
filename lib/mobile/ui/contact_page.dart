@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wazafny_app/core/themes/app_colors.dart';
 import 'package:wazafny_app/mobile/widgets/custom_elevated_button.dart';
 
+import '../../core/themes/app_styles.dart';
+
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
 
@@ -15,22 +17,15 @@ class ContactPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Get In Touch",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
+              Text(
+                "Contact Me",
+                style: AppTextStyles.font34WhiteExtraBold,
                 ),
-              ),
               const SizedBox(height: 8.0),
-              const Text(
+               Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white54,
-                  fontSize: 14.0,
-                ),
+                style: AppTextStyles.font14mediumGrayRegular,
               ),
               const SizedBox(height: 24.0),
               const CustomTextField(
@@ -77,7 +72,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: const TextStyle(color: Colors.white, fontSize: 16.0),
+          style: AppTextStyles.font18WhiteBold,
         ),
         const SizedBox(height: 8.0),
         TextField(
@@ -86,6 +81,7 @@ class CustomTextField extends StatelessWidget {
             filled: true,
             fillColor: Colors.white,
             hintText: hintText,
+            hintStyle: AppTextStyles.font14mediumGrayRegular,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
               borderSide: BorderSide.none,
