@@ -4,7 +4,6 @@ import 'package:wazafny_app/core/themes/app_styles.dart';
 
 import '../widgets/testimonial_card.dart';
 
-
 class TestimonialsPage extends StatelessWidget {
   const TestimonialsPage({super.key});
 
@@ -13,10 +12,12 @@ class TestimonialsPage extends StatelessWidget {
     return Container(
       color: AppColors.pureBlack,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 90),
-          Text('Testimonials', style: AppTextStyles.font34WhiteExtraBold),
+          Text(
+            'Testimonials',
+            style: AppTextStyles.font34WhiteExtraBold,
+          ),
           const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 400),
@@ -28,59 +29,74 @@ class TestimonialsPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 40),
-          SingleChildScrollView(
+          const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: EdgeInsets.symmetric(horizontal: 8), // Reduced padding
               child: Column(
                 children: [
                   Row(
-                    children: const [
+                    children: [
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
+                      SizedBox(width: 12), // Reduced space between cards
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
+                      SizedBox(width: 12), // Reduced space between cards
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
+                      SizedBox(width: 12), // Reduced space between cards
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
                     ],
                   ),
-                  const SizedBox(height: 40),
+                  SizedBox(height: 12), // Reduced space between rows
                   Row(
-                    children: const [
+                    children: [
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
+                      SizedBox(width: 12), // Reduced space between cards
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
+                      SizedBox(width: 12), // Reduced space between cards
                       TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        imageUrl:
+                            'https://images.unsplash.com/photo-1501432377862-3d0432b87a14?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                        testimonial:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                         clientName: 'Client Name',
                       ),
-                      TestimonialCard(
-                        imageUrl: 'https://via.placeholder.com/150',
-                        testimonial: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                        clientName: 'Client Name',
-                      ),
+                      SizedBox(width: 12), // Reduced space between cards
                     ],
                   ),
                 ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wazafny_app/core/themes/app_styles.dart';
 
-class work_experience_card extends StatefulWidget {
+class WorkExperienceCard extends StatefulWidget {
   final String label;
   final Color labelColor;
   final String title;
@@ -11,7 +11,7 @@ class work_experience_card extends StatefulWidget {
   final String buttonText;
   final String imageUrl;
 
-  const work_experience_card({
+  const WorkExperienceCard({
     super.key,
     required this.label,
     required this.labelColor,
@@ -23,10 +23,10 @@ class work_experience_card extends StatefulWidget {
   });
 
   @override
-  State<work_experience_card> createState() => _work_experience_cardState();
+  State<WorkExperienceCard> createState() => _WorkExperienceCardState();
 }
 
-class _work_experience_cardState extends State<work_experience_card> {
+class _WorkExperienceCardState extends State<WorkExperienceCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,8 +34,22 @@ class _work_experience_cardState extends State<work_experience_card> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SvgPicture.asset(widget.imageUrl,
-              height: 250, width: 550, fit: BoxFit.cover),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: widget.imageUrl.endsWith('.svg')
+                ? SvgPicture.asset(
+              widget.imageUrl,
+              height: 250,
+              width: 550,
+              fit: BoxFit.cover,
+            )
+                : Image.network(
+              widget.imageUrl,
+              height: 250,
+              width: 550,
+              fit: BoxFit.cover,
+            ),
+          ),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -70,8 +84,7 @@ class _work_experience_cardState extends State<work_experience_card> {
                     style: AppTextStyles.font14mediumGrayRegular,
                   ),
                 ),
-                const SizedBox(height: 8),
-                // buttons
+                const SizedBox(height: 80),
                 TextButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: widget.buttonColor,
